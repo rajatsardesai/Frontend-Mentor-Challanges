@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="IP Address Tracker">
+    <meta name="description"
+        content="IP Address Tracker that can search location, timezone and ISP along with map on a single click!!">
+    <meta name="author" content="Rajat Sardesai">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <link rel="shortcut icon" href="/content/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/content/css/style.min.css">
+    <title>IP Address Tracker</title>
+</head>
+
+<body>
+    <div class="background">
+    </div>
+    <div id="map"></div>
+
+    <div class="container">
+        <h1>IP Address Tracker</h1>
+        <form id="form" class="form">
+            <input type="text" class="input" id="input" placeholder="Search for any IP address or domain">
+            <button class="button" type="submit"><img src="/content/images/icon-arrow.svg" alt="icon arrow"></button>
+        </form>
+
+        <div class="card"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <script src="/content/scripts/config.js"></script>
+    <script src="/content/scripts/script.min.js"></script>
+</body>
+
+</html>

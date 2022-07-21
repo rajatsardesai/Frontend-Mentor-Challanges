@@ -1,0 +1,25 @@
+.card {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px 0;
+    background-color: $white;
+    border-radius: 15px;
+
+    @media screen and (min-width:992px) {
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        margin: 55px auto;
+
+        .ip-info {
+            text-align: left;
+            padding: 0 15px;
+
+            &:not(:last-of-type) {
+                border-right: 1px solid $border-color;
+            }
+        }
+    }
+
+
+}
