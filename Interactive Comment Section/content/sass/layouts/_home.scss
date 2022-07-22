@@ -1,0 +1,13 @@
+.reply-thread {
+    border-left: 1px solid red;
+
+    &>div {
+        margin-left: 15px;
+    }
+}
+
+.comment-action {
+    &:hover {
+        color: #6e6e6e;
+    }
+}
