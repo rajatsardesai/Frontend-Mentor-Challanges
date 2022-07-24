@@ -17,46 +17,11 @@
 
 <body>
     <div class="container my-4">
-        <div class="card border-0 shadow p-3 flex-md-row">
-            <div class="d-md-flex flex-md-column order-md-2">
-                <div class="d-flex align-items-center align-items-md-start">
-                    <div class="flex-shrink-0">
-                        <img src="/content/images/avatars/image-amyrobson.png" alt="Amyrobson Image" class="w-75">
-                    </div>
-                    <div class="flex-grow-1">
-                        <span class="fw-700 text-dark">amyrobson</span>
-                        <span class="fw-light ms-3">1 month ago</span>
-                    </div>
-                    <div class="comment-action mt-3">
-                        <button class="border-0 bg-transparent">
-                            <img src="/content/images/icon-reply.svg" alt="Reply" class="pe-2">
-                            <span class="blue fw-500">Reply</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="comment mt-3">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima enim hic placeat cumque sit
-                    asperiores
-                    aut suscipit neque quo quidem, perferendis pariatur. Voluptates, eos consequatur.
-                </div>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="counts d-md-flex flex-md-column p-2 mt-3 p-md-3 mt-md-0 me-md-3">
-                    <button class="border-0"><img src="/content/images/icon-plus.svg" alt="Upvote"
-                            class="ps-2 ps-md-0"></button>
-                    <span class="px-3 px-md-0 blue fw-500">12</span>
-                    <button class="border-0"><img src="/content/images/icon-minus.svg" alt="Downvote"
-                            class="pe-2 pe-md-0"></button>
-                </div>
-                <div class="reply mt-3 d-md-none">
-                    <img src="/content/images/icon-reply.svg" alt="Reply" class="pe-2">
-                    <span class="blue fw-500">Reply</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="card border-0 shadow p-3 mt-2">
-            <form>
+        <div class="comments"></div>
+
+        <!-- <div class="card reply-card border-0 shadow p-3 mt-2">
+            <form class="reply-comment">
                 <div class="d-flex justify-content-center">
                     <div class="flex-shrink-0">
                         <img src="/content/images/avatars/image-amyrobson.png" alt="Amyrobson Image" class="w-75">
@@ -71,113 +36,14 @@
                     </div>
                 </div>
             </form>
-        </div>
-
-        <div class="card border-0 shadow p-3 mt-3">
-            <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                    <img src="/content/images/avatars/image-amyrobson.png" alt="Amyrobson Image" class="w-75">
-                </div>
-                <div class="flex-grow-1">
-                    <span class="fw-700 text-dark">amyrobson</span>
-                    <span class="fw-light ms-3">1 month ago</span>
-                </div>
-            </div>
-            <div class="comment mt-3">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima enim hic placeat cumque sit asperiores
-                aut suscipit neque quo quidem, perferendis pariatur. Voluptates, eos consequatur.
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="counts p-2 mt-3">
-                    <button class="border-0"><img src="/content/images/icon-plus.svg" alt="Upvote"
-                            class="ps-2"></button>
-                    <span class="px-3 blue fw-500">12</span>
-                    <button class="border-0"><img src="/content/images/icon-minus.svg" alt="Downvote"
-                            class="pe-2"></button>
-                </div>
-                <div class="reply mt-3">
-                    <img src="/content/images/icon-reply.svg" alt="Reply" class="pe-2">
-                    <span class="blue fw-500">Reply</span>
-                </div>
-            </div>
-        </div>
+        </div> -->
 
         <div class="reply-thread">
-            <div class="card border-0 shadow p-3 mt-3">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <img src="/content/images/avatars/image-amyrobson.png" alt="Amyrobson Image" class="w-75">
-                    </div>
-                    <div class="flex-grow-1">
-                        <span class="fw-700 text-dark">amyrobson</span>
-                        <span class="fw-light ms-3">1 month ago</span>
-                    </div>
-                </div>
-                <div class="comment mt-3">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima enim hic placeat cumque sit
-                    asperiores
-                    aut suscipit neque quo quidem, perferendis pariatur. Voluptates, eos consequatur.
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="counts p-2 mt-3">
-                        <button class="border-0"><img src="/content/images/icon-plus.svg" alt="Upvote"
-                                class="ps-2"></button>
-                        <span class="px-3 blue fw-500">12</span>
-                        <button class="border-0"><img src="/content/images/icon-minus.svg" alt="Downvote"
-                                class="pe-2"></button>
-                    </div>
-                    <div class="reply mt-3">
-                        <img src="/content/images/icon-reply.svg" alt="Reply" class="pe-2">
-                        <span class="blue fw-500">Reply</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card border-0 shadow p-3 mt-3">
-                <div class="d-flex align-items-center">
-                    <div class="flex-shrink-0">
-                        <img src="/content/images/avatars/image-amyrobson.png" alt="Amyrobson Image" class="w-75">
-                    </div>
-                    <div class="flex-grow-1">
-                        <span class="fw-700 text-dark">amyrobson</span>
-                        <span class="badge bg-blue ms-1">you</span>
-                        <span class="fw-light ms-3">1 month ago</span>
-                    </div>
-                    <div class="comment-action mt-3">
-                        <button class="border-0 bg-transparent">
-                            <img src="/content/images/icon-delete.svg" alt="Delete" class="pe-2">
-                            <span class="red fw-500 me-3">Delete</span>
-                        </button>
-                        <button class="border-0 bg-transparent">
-                            <img src="/content/images/icon-edit.svg" alt="Edit" class="pe-2">
-                            <span class="blue fw-500">Edit</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="comment mt-3">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima enim hic placeat cumque sit
-                    asperiores
-                    aut suscipit neque quo quidem, perferendis pariatur. Voluptates, eos consequatur.
-                </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="counts p-2 mt-3">
-                        <button class="border-0"><img src="/content/images/icon-plus.svg" alt="Upvote"
-                                class="ps-2"></button>
-                        <span class="px-3 blue fw-500">12</span>
-                        <button class="border-0"><img src="/content/images/icon-minus.svg" alt="Downvote"
-                                class="pe-2"></button>
-                    </div>
-                    <div class="reply mt-3 d-md-none">
-                        <img src="/content/images/icon-delete.svg" alt="Delete" class="pe-2">
-                        <span class="red fw-500 me-3">Delete</span>
-                        <img src="/content/images/icon-edit.svg" alt="Edit" class="pe-2">
-                        <span class="blue fw-500">Edit</span>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <div class="card border-0 shadow p-3 mt-3">
-            <form>
+            <form class="add-comment">
                 <div class="mb-3">
                     <textarea class="form-control" id="commentForm" rows="3" placeholder="Add a comment..."></textarea>
                 </div>
