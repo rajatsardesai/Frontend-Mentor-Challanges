@@ -20,6 +20,10 @@ DO NOT WRITE ANY CSS STYLINGS HERE */
   background-color: hsl(238deg, 40%, 52%);
 }
 
+.bg-red {
+  background-color: hsl(358deg, 79%, 66%);
+}
+
 .fw-300 {
   font-weight: 300;
 }
@@ -36,6 +40,10 @@ DO NOT WRITE ANY CSS STYLINGS HERE */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+button {
+  font-style: inherit;
 }
 
 body {
@@ -58,6 +66,15 @@ body {
 
 .comment-action:hover {
   color: #6e6e6e;
+}
+
+.add-comment-bubble {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .add-comment-bubble {
+    width: 0;
+  }
 }
 
 .counts {

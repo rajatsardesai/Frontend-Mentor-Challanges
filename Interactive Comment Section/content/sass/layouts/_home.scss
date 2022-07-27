@@ -11,3 +11,11 @@
         color: #6e6e6e;
     }
 }
+
+.add-comment-bubble {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        width: 0;
+    }
+}
