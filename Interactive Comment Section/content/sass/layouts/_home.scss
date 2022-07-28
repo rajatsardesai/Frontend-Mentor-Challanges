@@ -1,8 +1,14 @@
 .reply-thread {
-    border-left: 1px solid red;
+    border-left: 3px solid #eee;
 
     &>div {
         margin-left: 15px;
+    }
+
+    @include media-breakpoint-up(md) {
+        &>div {
+            margin-left: 35px;
+        }
     }
 }
 

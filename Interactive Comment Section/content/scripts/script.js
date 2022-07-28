@@ -1,7 +1,3 @@
-const comments = document.querySelector('.comments');
-const upVote = document.querySelector('.upvote');
-const downVote = document.querySelector('.downvote');
-const vote = document.querySelector('.vote');
 const currentUserImg = document.querySelector('.curentuser-image');
 const replyCard = document.querySelector('.reply-card');
 const replyForm = document.getElementById('reply-form');
@@ -44,7 +40,7 @@ const createTemplate = (comment) => {
             </div>
             <div class="flex-grow-1">
                 <span class="fw-700 text-dark user-name">${comment.name ? comment.name : comment.user.username}</span>
-                <span class="badge bg-blue ms-1 ${comment.name ? 'd-inline-block' : 'd-none'}">you</span>
+                <span class="badge bg-blue ms-1 ${comment.name === 'juliusomo' ? 'd-inline-block' : 'd-none'}">you</span>
                 <span class="fw-light ms-3 user-time">${comment.time ? comment.time : comment.createdAt}</span>
             </div>
             <div class="comment-action mt-3 d-none d-md-block">
@@ -77,28 +73,28 @@ const createTemplate = (comment) => {
     if (comment.img) {  // Checking if add new data is present or not
         replyCard.before(card);    // Adding card to the end of all comments
     } else {
-        comments.appendChild(card); // Appending card in HTML comments container
+        replyThread.before(card); // Appending card before reply cards
     }
 
     if (comment.replyingTo) {   // Checking if replying key is present in json file and appending it to reply thread
         replyThread.appendChild(card);
     }
 
-    replyComment(card); // Calling reply to comment form
+    replyComment(card, comment); // Calling reply to comment form
 
-    // replyCard.replaceWith(card);
+    updateScore(card); // Calling to update score
 };
 
 // Function to open reply input after each comment
 
-const replyComment = (card) => {
+const replyComment = (card, comment) => {
     const replyBtn = card.querySelector('.reply-btn');
 
     replyBtn.addEventListener('click', () => {
         // getCurrentuserData();
         replyCard.classList.toggle('active');   // Toggle class to open reply input
-        card.parentNode.insertBefore(replyCard, card.nextSibling);  // Inserting reply input before each card that is replied to
-        addNewReply(card);  // Calling to get input from new reply
+        card.after(replyCard);  // Inserting reply input before each card that is replied to
+        addNewReply(comment);  // Calling to get input from new reply
     });
 };
 
@@ -111,7 +107,7 @@ const getCurrentuserData = (data) => {
 
 // Function to get input from new reply
 
-const addNewReply = () => {
+const addNewReply = (commentTo) => {
     let currentObj = {};
     const replyComment = document.getElementById('reply-comment');
     replyForm.addEventListener('submit', (e) => {
@@ -123,6 +119,7 @@ const addNewReply = () => {
         currentObj.time = `${new Date().getMinutes()} minutes ago`;
         currentObj.reply = replyComment.value;
         currentObj.vote = `${0}`;
+        currentObj.commentto = commentTo.user.username;
 
         addToReplyThread(currentObj);   // Passing current user data to the function
 
@@ -172,7 +169,7 @@ const addToReplyThread = (currentuser, text = '') => {
                 <div class="counts d-md-flex flex-md-column p-2 mt-3 p-md-3 mt-md-0 me-md-3">
                 <button class="border-0 upvote"><img src="/content/images/icon-plus.svg" alt="Upvote"
                     class="ps-2 ps-md-0"></button>
-                <span class="px-3 px-md-0 blue fw-500 vote">${currentuser.vote}</span>
+                <span class="px-3 px-md-0 blue fw-500 vote">0</span>
                 <button class="border-0 downvote"><img src="/content/images/icon-minus.svg" alt="Downvote"
                     class="pe-2 pe-md-0"></button>
             </div>
@@ -199,7 +196,9 @@ const addToReplyThread = (currentuser, text = '') => {
     const textArea = card.querySelector('.edit-comment');
 
     textArea.value = currentuser.reply;
-    main.innerHTML = currentuser.reply;
+    main.innerHTML = `@${currentuser.commentto + ' ' + currentuser.reply}`;
+
+    console.log(currentuser.commentto);
 
     // Delete replied comment
 
@@ -233,6 +232,8 @@ const addToReplyThread = (currentuser, text = '') => {
         const { value } = e.target;
         main.innerHTML = value;
     });
+
+    updateScore(card);      // Calling to update score
 };
 
 // Function to add new comment
@@ -245,14 +246,37 @@ const addNewComment = () => {
     addCommentForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const commentImg = addCommentImg.getAttribute('src');
-        newCommentObj.cid = `${id++}`;
+        newCommentObj.cid = `${id++} `;
         newCommentObj.img = commentImg;
         newCommentObj.name = 'juliusomo';
         newCommentObj.comment = addCommentContent.value;
         newCommentObj.time = `${new Date().getHours()} Hours ago`;
         newCommentObj.vote = `${0}`;
         createTemplate(newCommentObj);
+
+        addCommentContent.value = '';    // Reset reply input
     })
 };
 
 addNewComment();
+
+// Function to update scrore
+
+const updateScore = (card) => {
+    const upVote = card.querySelector('.upvote');
+    const downVote = card.querySelector('.downvote');
+    const vote = card.querySelector('.vote');
+
+    // Increases score
+    upVote.addEventListener('click', () => {
+        vote.innerText++;
+    });
+
+    // Decreases score
+    downVote.addEventListener('click', () => {
+        vote.innerText--;
+        if (vote.innerText === '-1') {      // Checks if score is -1 then set it to 0
+            vote.innerHTML = 0;
+        }
+    });
+};

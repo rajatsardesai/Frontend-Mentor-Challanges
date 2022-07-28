@@ -58,10 +58,15 @@ body {
 }
 
 .reply-thread {
-  border-left: 1px solid red;
+  border-left: 3px solid #eee;
 }
 .reply-thread > div {
   margin-left: 15px;
+}
+@media (min-width: 768px) {
+  .reply-thread > div {
+    margin-left: 35px;
+  }
 }
 
 .comment-action:hover {
