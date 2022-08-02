@@ -1,0 +1,27 @@
+.reply-thread {
+    border-left: 3px solid #eee;
+
+    &>div {
+        margin-left: 15px;
+    }
+
+    @include media-breakpoint-up(md) {
+        &>div {
+            margin-left: 35px;
+        }
+    }
+}
+
+.comment-action {
+    &:hover {
+        color: #6e6e6e;
+    }
+}
+
+.add-comment-bubble {
+    width: 100%;
+
+    @include media-breakpoint-up(md) {
+        width: 0;
+    }
+}

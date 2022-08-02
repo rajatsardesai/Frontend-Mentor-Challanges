@@ -1,0 +1,10 @@
+body {
+    font-family: $font;
+    color: #6e6e6e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    background-color: $gray-100;
+}
