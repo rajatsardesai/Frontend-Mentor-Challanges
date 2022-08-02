@@ -1,0 +1,10 @@
+.was-validated .form-control:invalid {
+    background-image: url('/content/images/icon-error.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+}
+
+input[type="date"] {
+    background-position: right calc(2.375em + 0.1875rem) center !important;
+}
