@@ -1,0 +1,33 @@
+// ----------------------- Typography ----------------------
+
+h1,
+.h1 {
+    @include fontprop(28, 700);
+
+    @include media-breakpoint-up(md) {
+        @include fontprop(42, 700);
+    }
+}
+
+p,
+.p {
+    @include fontprop(16, 400);
+}
+
+form {
+    input {
+        &::placeholder {
+            font-weight: 500;
+        }
+    }
+}
+
+.claim-btn {
+    @include fontprop(16, inherit);
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 600;
+}

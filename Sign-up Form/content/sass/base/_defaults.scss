@@ -1,0 +1,16 @@
+body {
+    font-family: $primary-font;
+    color: $primary-color;
+    background: $primary-color url('/content/images/bg-intro-mobile.png') no-repeat center top/cover;
+
+    @include media-breakpoint-up(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    @include media-breakpoint-up(md) {
+        background: $primary-color url('/content/images/bg-intro-desktop.png') no-repeat center center/cover;
+    }
+}
