@@ -1,0 +1,15 @@
+// Mixins
+
+// ----------------------- Font Properties ----------------------
+
+@mixin fontprop($fontsize, $fontweight) {
+    font-family: $primary-font;
+    font-size: calc($fontsize / 16) + rem;
+    font-weight: $fontweight;
+}
+
+@mixin relative($top, $left) {
+    position: relative;
+    top: $top;
+    left: $left;
+}

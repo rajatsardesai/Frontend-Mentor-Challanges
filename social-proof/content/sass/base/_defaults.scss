@@ -1,0 +1,16 @@
+body {
+    font-family: $primary-font;
+    color: $primary-color;
+    background: url('/content/images/bg-pattern-top-mobile.svg') no-repeat left top, url('/content/images/bg-pattern-bottom-mobile.svg') no-repeat right bottom;
+
+    @media (min-width: 768px) {
+        background: url('/content/images/bg-pattern-top-desktop.svg') no-repeat left top, url('/content/images/bg-pattern-bottom-desktop.svg') no-repeat right bottom;
+    }
+
+    @media (min-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,52 @@
+.rating-cards-bubble {
+    width: 100%;
+
+    .rating-card {
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: 70%;
+        }
+    }
+
+    #rating-card-top {
+        @media (min-width: 992px) {
+            @include relative(auto, 30%);
+        }
+    }
+
+    #rating-card-middle {
+        @media (min-width: 992px) {
+            @include relative(auto, 38%);
+        }
+    }
+
+    #rating-card-bottom {
+        @media (min-width: 992px) {
+            @include relative(auto, 46%);
+        }
+    }
+
+    @media (min-width: 992px) {
+        width: 86%;
+    }
+}
+
+.review-cards {
+
+    #review-card-middle {
+        @media (min-width: 992px) {
+            @include relative(20px, auto);
+        }
+    }
+
+    #review-card-bottom {
+        @media (min-width: 992px) {
+            @include relative(40px, auto);
+        }
+    }
+
+    .review-profile {
+        width: 12%;
+    }
+}
