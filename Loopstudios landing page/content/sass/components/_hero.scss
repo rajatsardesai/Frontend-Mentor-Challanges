@@ -1,0 +1,21 @@
+.hero-img {
+    background: url('/content/images/mobile/image-hero.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 80vh;
+    z-index: -100;
+
+    @include media-breakpoint-up(md) {
+        background: url('/content/images/desktop/image-hero.jpg') no-repeat center center/cover;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 80vh;
+            top: 0;
+            left: 0;
+            background-color: $secondary-color;
+            opacity: 0.4;
+        }
+    }
+}

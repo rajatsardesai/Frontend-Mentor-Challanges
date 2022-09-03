@@ -1,0 +1,8 @@
+// Mixins
+
+// ----------------------- Font Properties ----------------------
+
+@mixin fontprop($fontsize, $fontweight) {
+    font-size: calc($fontsize / 16) + rem;
+    font-weight: $fontweight;
+}

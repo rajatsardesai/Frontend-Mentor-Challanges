@@ -1,0 +1,34 @@
+.card {
+    cursor: pointer;
+
+    .img-caption {
+        position: absolute;
+        bottom: 0;
+    }
+
+    span {
+        color: $primary-color;
+    }
+
+    &::before {
+        @extend .inner-shadow;
+        box-shadow: inset 150px 0 80px 10px rgba($secondary-color, 0.8);
+
+        @include media-breakpoint-up(md) {
+            box-shadow: inset 0 -150px 80px 10px rgba($secondary-color, 0.8);
+        }
+    }
+
+    &:hover {
+        &::after {
+            @extend .inner-shadow;
+            background-color: $primary-color;
+        }
+
+        span {
+            color: $secondary-color;
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+}
