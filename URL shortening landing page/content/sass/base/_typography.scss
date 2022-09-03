@@ -1,0 +1,46 @@
+// ----------------------- Typography ----------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+h1,
+.h1 {
+    @include fontprop(40, 700);
+
+    @include media-breakpoint-up(lg) {
+        @include fontprop(62, 700);
+    }
+}
+
+h2,
+.h2 {
+    @include fontprop(26, 700);
+
+    @include media-breakpoint-up(md) {
+        @include fontprop(35, 700);
+    }
+}
+
+p,
+.p {
+    @include fontprop(18, 500);
+    color: $violet-gray;
+}
+
+button,
+.btn {
+    @include fontprop(18, 500);
+
+    @include media-breakpoint-up(md) {
+        @include fontprop(16, 500);
+    }
+}
+
+.stats-title {
+    @include fontprop(22, 700);
+}
+
+.footer {
+    span {
+        @include fontprop(14, 500);
+    }
+}

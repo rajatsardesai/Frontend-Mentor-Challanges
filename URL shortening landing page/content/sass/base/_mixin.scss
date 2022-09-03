@@ -1,0 +1,29 @@
+// Mixins
+
+// ----------------------- Font Properties ----------------------
+
+@mixin fontprop($fontsize, $fontweight) {
+    font-size: calc($fontsize / 16) + rem;
+    font-weight: $fontweight;
+}
+
+// ----------------------- Card Icons ----------------------
+
+@mixin cardicons($name) {
+    &::before {
+        content: '';
+        position: absolute;
+        top: -15%;
+        left: 50%;
+        background: $secondary-color url($name) no-repeat center center/50%;
+        min-width: 80px;
+        height: 80px;
+        z-index: 5;
+        border-radius: 50%;
+        transform: translateX(-50%);
+
+        @include media-breakpoint-up(lg) {
+            left: 20%;
+        }
+    }
+}

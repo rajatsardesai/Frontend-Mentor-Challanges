@@ -1,0 +1,37 @@
+.navbar-collapse {
+    background-color: $secondary-color;
+    border-radius: 10px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 90%;
+    z-index: 5;
+    transform: translateX(-50%);
+
+    @include media-breakpoint-up(lg) {
+        background-color: transparent;
+        border-radius: 0px;
+        position: unset;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+.nav-link {
+    color: $white  !important;
+
+    @include media-breakpoint-up(lg) {
+        color: $gray  !important;
+
+        &:hover {
+            color: $dark-blue  !important;
+        }
+    }
+}
+
+.nav-hr {
+    background-color: $gray;
+    opacity: 0.3;
+}
