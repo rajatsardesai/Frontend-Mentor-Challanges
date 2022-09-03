@@ -1,0 +1,56 @@
+// ----------------------- Typography ----------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+h1,
+.h1 {
+    font-family: $secondary-font;
+    @include fontprop(35, 300);
+
+    @include media-breakpoint-up(md) {
+        @include fontprop(56, 300);
+    }
+}
+
+h2,
+.h2 {
+    font-family: $secondary-font;
+    @include fontprop(22, 300);
+
+    @include media-breakpoint-up(lg) {
+        @include fontprop(32, 300);
+    }
+}
+
+p,
+.p {
+    @include fontprop(15, 400);
+    color: $gray;
+}
+
+a {
+    @include fontprop(15, 400);
+}
+
+.nav-link {
+    @include fontprop(25, 300);
+
+    @include media-breakpoint-up(md) {
+        @include fontprop(35, 300);
+    }
+
+    @include media-breakpoint-up(lg) {
+        @include fontprop(14, 300);
+    }
+}
+
+button {
+    letter-spacing: 4px;
+}
+
+.headings{
+    @include media-breakpoint-up(md) {
+        @include fontprop(32, 300);
+    }
+}
