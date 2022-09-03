@@ -1,0 +1,15 @@
+.hero-img {
+    position: relative;
+    left: 5%;
+    width: 135%;
+}
+
+.boost {
+    background: $secondary-color url('/content/images/bg-boost-mobile.svg') no-repeat center center/cover;
+    padding: 80px 0;
+
+    @include media-breakpoint-up(md) {
+        background: $secondary-color url('/content/images/bg-boost-desktop.svg') no-repeat center center/cover;
+        padding: 50px 0;
+    }
+}

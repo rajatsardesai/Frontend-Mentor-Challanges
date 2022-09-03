@@ -1,0 +1,71 @@
+.card-input {
+    background: $secondary-color url('/content/images/bg-shorten-mobile.svg') no-repeat top right/65%;
+
+    @include media-breakpoint-up(md) {
+        background: $secondary-color url('/content/images/bg-shorten-desktop.svg') no-repeat center center/cover;
+    }
+}
+
+.url {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.short-url {
+    color: $primary-color;
+}
+
+.card-deck {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 80%;
+        background-color: $primary-color;
+        z-index: -10;
+
+        @include media-breakpoint-up(lg) {
+            width: 80%;
+            height: 6px;
+            top: 50%;
+            left: 50%;
+        }
+    }
+}
+
+.stats-card {
+    position: relative;
+    margin-bottom: 84px !important;
+
+    &#brand-icon {
+        @include cardicons('/content/images/icon-brand-recognition.svg');
+    }
+
+    &#detailed-icon {
+        @include cardicons('/content/images/icon-detailed-records.svg');
+
+        @include media-breakpoint-up(md) {
+            position: relative;
+            top: 40px;
+        }
+    }
+
+    &#customizable-icon {
+        @include cardicons('/content/images/icon-fully-customizable.svg');
+
+        @include media-breakpoint-up(md) {
+            position: relative;
+            top: 80px;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0 !important;
+    }
+}
